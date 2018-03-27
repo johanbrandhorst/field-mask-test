@@ -14,7 +14,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"
 
-	pbExample "github.com/johanbrandhorst/grpc-example/proto"
+	pbExample "github.com/johanbrandhorst/field-mask-test/proto"
 )
 
 var (
