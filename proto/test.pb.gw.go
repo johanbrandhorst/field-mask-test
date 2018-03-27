@@ -140,7 +140,7 @@ func RegisterTestFieldMaskHandlerClient(ctx context.Context, mux *runtime.ServeM
 }
 
 var (
-	pattern_TestFieldMask_UpdateUser_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 2, 3, 1, 0, 4, 4, 5, 4}, []string{"api", "v1", "installations", "users", "user.name"}, ""))
+	pattern_TestFieldMask_UpdateUser_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"api", "v1", "user.name"}, ""))
 )
 
 var (

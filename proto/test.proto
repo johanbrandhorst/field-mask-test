@@ -7,7 +7,7 @@ service TestFieldMask {
     // Update an existing user.
     rpc UpdateUser(UpdateUserRequest) returns (User) {
         option (google.api.http) = {
-            patch: "/api/v1/{user.name=installations/*/users/*}"
+            patch: "/api/v1/{user.name}"
             body: "user"
         };
     }
