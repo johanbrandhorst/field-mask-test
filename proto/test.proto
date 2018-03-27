@@ -1,0 +1,34 @@
+syntax="proto3";
+
+import "google/protobuf/field_mask.proto";
+import "google/api/annotations.proto";
+
+service TestFieldMask {
+    // Update an existing user.
+    rpc UpdateUser(UpdateUserRequest) returns (User) {
+        option (google.api.http) = {
+            patch: "/api/v1/{user.name=installations/*/users/*}"
+            body: "user"
+        };
+    }
+}
+
+message UpdateUserRequest {
+    // The user resource which replaces the resource on the server.
+    User user = 2;
+
+    // The update mask applies to the resource. For the `FieldMask` definition,
+    // see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    google.protobuf.FieldMask update_mask = 3;
+}
+
+message User {
+    // Relative resource name.
+    string name = 1;
+
+    // Display name.
+    string display_name = 3;
+
+    // Description.
+    string description = 4;
+}
